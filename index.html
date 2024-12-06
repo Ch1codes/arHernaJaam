@@ -3,12 +3,9 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>GeoAR.js Arrow Demo</title>
+    <title>herna jaam</title>
     <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-    <script>
-        THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
-    </script>
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
@@ -17,18 +14,16 @@
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
         
-        <!-- Arrow Entity -->
-        <a-entity 
-            geometry="primitive: cone; height: 1; radiusBottom: 0.1; radiusTop: 0.001"
-            material="color: red"
-            rotation="-90 0 0"
-            position="0 1 0"
-            scale="0.3 0.3 0.3"
-            gps-entity-place="longitude: 27.670693; latitude: 85.439092;">
-        </a-entity>
-        
-        <!-- Camera -->
-        <a-camera gps-camera rotation-reader></a-camera>
+        <!-- Arrow Entity attached to the Camera -->
+        <a-camera gps-camera rotation-reader>
+            <a-entity 
+                geometry="primitive: cone; height: 1; radiusBottom: 0.1; radiusTop: 0.001"
+                material="color: red"
+                rotation="-90 0 0"
+                position="0 0 -2"
+                scale="0.3 0.3 0.3">
+            </a-entity>
+        </a-camera>
     </a-scene>
 </body>
 </html>
