@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>herna jaam</title>
+    <title>AR.js 2D Arrow Demo</title>
     <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
 </head>
@@ -14,24 +14,14 @@
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
         
-        <!-- Camera with attached arrow -->
+        <!-- Camera with attached 2D arrow -->
         <a-camera gps-camera rotation-reader>
-            <!-- Arrow shaft -->
-            <a-entity 
-                geometry="primitive: cylinder; height: 0.8; radius: 0.05"
-                material="color: red"
-                position="0 0.4 -2">
-            </a-entity>
-            
-            <!-- Arrowhead -->
-            <a-entity 
-                geometry="primitive: cone; height: 0.4; radiusBottom: 0.15; radiusTop: 0.001"
-                material="color: red"
-                position="0 0.8 -2">
-            </a-entity>
+            <a-image 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Arrow_up_font_awesome.svg/2048px-Arrow_up_font_awesome.svg.png" 
+                scale="0.5 0.5 0.5"
+                position="0 0 -2">
+            </a-image>
         </a-camera>
     </a-scene>
 </body>
-</html>
-
 </html>
